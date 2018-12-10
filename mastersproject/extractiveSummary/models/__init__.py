@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
-
-from __future__ import absolute_import
+#Importing Libraries  for utils, literals and functions
 from __future__ import division, print_function, unicode_literals
+from __future__ import absolute_import
+#Importing the tfmodel
+from .tfmodel import TfDocumentModelCls
 
 
-from .tf import TfDocumentModel
+

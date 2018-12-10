@@ -1,8 +1,13 @@
 # -*- coding: utf-8 -*-
-
-from __future__ import absolute_import
+#Importing absolute and supportive libraries for the model
 from __future__ import division, print_function, unicode_literals
+from __future__ import absolute_import
 
-from ._document import ObjectDocumentModel
-from ._paragraph import Paragraph
-from ._sentence import Sentence
+#Import sentence, obhectDOM, Paragraph using this init
+from ._sentenceFile import Sentence01
+from ._documentFile import ObjectDocumentModelMethod
+from ._paragraphParseFile import ParagraphCls
+
+
+
+

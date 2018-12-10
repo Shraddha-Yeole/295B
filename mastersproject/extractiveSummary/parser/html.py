@@ -13,11 +13,11 @@ class HtmlParser(DocumentParser):
     """Parser of text from HTML format into DOM."""
 
     SIGNIFICANT_TAGS = (
-        "h1", "h2", "h3",
-        "b", "strong",
-        "big",
+        "b", "big",
         "dfn",
         "em",
+        "h1", "h2", "h3",
+        "strong",
     )
 
     @classmethod
@@ -30,7 +30,7 @@ class HtmlParser(DocumentParser):
             return cls(file.read(), tokenizer, url)
 
     @classmethod
-    def from_url(cls, url, tokenizer):
+    def blogFromUrl(cls, url, tokenizer):
         data = fetch_url(url)
         return cls(data, tokenizer, url)
 
@@ -76,11 +76,6 @@ class HtmlParser(DocumentParser):
 
     @cached_property
     def document(self):
-        # "a", "abbr", "acronym", "b", "big", "blink", "blockquote", "cite", "code",
-        # "dd", "del", "dfn", "dir", "dl", "dt", "em", "h", "h1", "h2", "h3", "h4",
-        # "h5", "h6", "i", "ins", "kbd", "li", "marquee", "menu", "ol", "pre", "q",
-        # "s", "samp", "strike", "strong", "sub", "sup", "tt", "u", "ul", "var",
-
         annotated_text = self._article.main_text
 
         paragraphs = []
