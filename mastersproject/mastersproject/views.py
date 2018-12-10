@@ -23,7 +23,7 @@ def homepage(request):
 def count(request):
 	URL = request.GET.get('urlvalue')
 	SENTENCES_COUNT = request.GET.get('SENTENCES_COUNT')
-	parser = HtmlParser.from_url(URL, Tokenizer(LANGUAGE))
+	parser = HtmlParser.blogFromUrl(URL, Tokenizer(LANGUAGE))
 	stemmer = Stemmer(LANGUAGE)
 	summarizer = Summarizer(stemmer)
 	summarizer.stop_words = get_stop_words(LANGUAGE)
