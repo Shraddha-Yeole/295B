@@ -5,7 +5,7 @@ from __future__ import division, print_function, unicode_literals
 
 from breadability.readable import Article
 from ..utils import cached_property, fetch_url
-from ..models.dom import Sentence, Paragraph, ObjectDocumentModel
+from ..models.dom import Sentence01, ParagraphCls, ObjectDocumentModelMethod
 from .parser import DocumentParser
 
 
@@ -91,4 +91,4 @@ class HtmlParser(DocumentParser):
             sentenceList.extend(Sentence(s, self._tokenizer) for s in newSentences)
             paragraphList.append(Paragraph(sentenceList))
 
-        return ObjectDocumentModel(paragraphs)
+        return ObjectDocumentModelMethod(paragraphs)

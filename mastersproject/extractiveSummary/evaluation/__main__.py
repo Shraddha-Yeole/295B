@@ -32,7 +32,7 @@ from itertools import chain
 from docopt import docopt
 
 from ..utils import ItemsCount, get_stop_words, fetch_url
-from ..models import TfDocumentModel
+from ..models import TfDocumentModelCls
 from .._compat import to_string
 from ..nlp.tokenizers import Tokenizer
 from ..parsers.html import HtmlParser

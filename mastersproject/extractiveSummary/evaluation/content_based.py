@@ -3,7 +3,7 @@
 from __future__ import absolute_import
 from __future__ import division, print_function, unicode_literals
 
-from ..models import TfDocumentModel as TfModel
+from ..models import TfDocumentModelCls as TfModel
 
 
 def cosine_similarity(evaluated_model, reference_model):

@@ -3,7 +3,7 @@
 from __future__ import absolute_import
 from __future__ import division, print_function, unicode_literals
 
-from ..models.dom import Sentence
+from ..models.dom import Sentence01
 
 
 def _get_ngrams(n, text):
